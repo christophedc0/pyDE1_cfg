@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "602a2634-4b7e-4170-8f37-655f365dcbe5",
+		"name": "pyDE1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24015451"
+	},
+	"item": [
+		{
+			"name": "Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/version",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/logs",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get \"everything\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DE1] Feature flags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/feature_flags",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"feature_flags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DE1] Espresso control",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/control/espresso",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"control",
+						"espresso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DE1] Current state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/state",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DE1] Change profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3f8d1e22d77d860d53d011b4974720974d5380f2\"\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/profile/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"profile",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DE1] Upload profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/profile",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] Scan",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"begin\": true\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/scan",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"scan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] Cached devices from scan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/scan/devices",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"scan",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] DE1 id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] DE1 id - Connect to first found",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_if_found\": true\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] DE1 id - Connect to specific",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"D9:B2:48:AA:BB:CC\"\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/de1/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"de1",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] Scale id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.32.0.41:1234/scale/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"scale",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] Scale id - Connect to first found",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_if_found\": true\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/scale/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"scale",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BLE] Scale id - Connect to specific",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"00:1C:97:1C:C4:20\"\n}"
+				},
+				"url": {
+					"raw": "http://10.32.0.41:1234/scale/id",
+					"protocol": "http",
+					"host": [
+						"10",
+						"32",
+						"0",
+						"41"
+					],
+					"port": "1234",
+					"path": [
+						"scale",
+						"id"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
